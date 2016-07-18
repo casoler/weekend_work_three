@@ -3,7 +3,17 @@
 # the first string, and false otherwise.
 
 def mutation?(base_word, mutation)
+  base_word_array = base_word.split("").uniq
+  mutation_array = mutation.split("").uniq
 
+  in_array = true
+
+  mutation_array.each do | letter|
+    unless base_word_array.include? letter
+      in_array = false
+    end
+  end
+  in_array
 end
 
 # Driver code - don't touch anything below this line.

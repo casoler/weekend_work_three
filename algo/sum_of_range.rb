@@ -3,7 +3,16 @@
 # numbers, inclusive.
 
 def sum_of_range(array)
+  array_new = array.sort
+  low_number = array_new[0]
+  high_number = array_new[1]
 
+  sum = 0
+
+  (low_number..high_number).each do |num|
+    sum += num
+  end
+  sum
 end
 
 # Driver code - don't touch anything below this line.
